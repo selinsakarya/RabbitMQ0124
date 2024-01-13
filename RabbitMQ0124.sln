@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Producer", "Producer\Produc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer", "Consumer\Consumer.csproj", "{40D5E1B9-F94B-4961-B4AE-FFA302BCAA21}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankingApi", "BankingApi\BankingApi.csproj", "{6110C4C9-9684-4ED9-BF95-67E51323E56C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{40D5E1B9-F94B-4961-B4AE-FFA302BCAA21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40D5E1B9-F94B-4961-B4AE-FFA302BCAA21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40D5E1B9-F94B-4961-B4AE-FFA302BCAA21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6110C4C9-9684-4ED9-BF95-67E51323E56C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6110C4C9-9684-4ED9-BF95-67E51323E56C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6110C4C9-9684-4ED9-BF95-67E51323E56C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6110C4C9-9684-4ED9-BF95-67E51323E56C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
