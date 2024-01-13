@@ -1,0 +1,17 @@
+/Users/selinsakarya/Projects/RabbitMQ0124/Producer/bin/Debug/net8.0/Producer
+/Users/selinsakarya/Projects/RabbitMQ0124/Producer/bin/Debug/net8.0/Producer.deps.json
+/Users/selinsakarya/Projects/RabbitMQ0124/Producer/bin/Debug/net8.0/Producer.runtimeconfig.json
+/Users/selinsakarya/Projects/RabbitMQ0124/Producer/bin/Debug/net8.0/Producer.dll
+/Users/selinsakarya/Projects/RabbitMQ0124/Producer/bin/Debug/net8.0/Producer.pdb
+/Users/selinsakarya/Projects/RabbitMQ0124/Producer/bin/Debug/net8.0/RabbitMQ.Client.dll
+/Users/selinsakarya/Projects/RabbitMQ0124/Producer/obj/Debug/net8.0/Producer.csproj.AssemblyReference.cache
+/Users/selinsakarya/Projects/RabbitMQ0124/Producer/obj/Debug/net8.0/Producer.GeneratedMSBuildEditorConfig.editorconfig
+/Users/selinsakarya/Projects/RabbitMQ0124/Producer/obj/Debug/net8.0/Producer.AssemblyInfoInputs.cache
+/Users/selinsakarya/Projects/RabbitMQ0124/Producer/obj/Debug/net8.0/Producer.AssemblyInfo.cs
+/Users/selinsakarya/Projects/RabbitMQ0124/Producer/obj/Debug/net8.0/Producer.csproj.CoreCompileInputs.cache
+/Users/selinsakarya/Projects/RabbitMQ0124/Producer/obj/Debug/net8.0/Producer.csproj.CopyComplete
+/Users/selinsakarya/Projects/RabbitMQ0124/Producer/obj/Debug/net8.0/Producer.dll
+/Users/selinsakarya/Projects/RabbitMQ0124/Producer/obj/Debug/net8.0/refint/Producer.dll
+/Users/selinsakarya/Projects/RabbitMQ0124/Producer/obj/Debug/net8.0/Producer.pdb
+/Users/selinsakarya/Projects/RabbitMQ0124/Producer/obj/Debug/net8.0/Producer.genruntimeconfig.cache
+/Users/selinsakarya/Projects/RabbitMQ0124/Producer/obj/Debug/net8.0/ref/Producer.dll
