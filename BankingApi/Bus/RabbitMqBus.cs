@@ -133,14 +133,16 @@ public class RabbitMqBus : IEventBus
 
                 Type? eventType = _eventTypes.SingleOrDefault(t => t.Name == eventName);
 
-                if (eventType != null)
+                if (eventType == null)
                 {
-                    object? @event = JsonSerializer.Deserialize(message, eventType);
-
-                    Type concreteType = typeof(IEventHandler<>).MakeGenericType(eventType);
-
-                    await (Task)concreteType.GetMethod("Handle").Invoke(handler, [@event]);
+                    continue;
                 }
+
+                object? @event = JsonSerializer.Deserialize(message, eventType);
+
+                Type concreteType = typeof(IEventHandler<>).MakeGenericType(eventType);
+
+                await (Task)concreteType.GetMethod("Handle")!.Invoke(handler, [@event])!;
             }
         }
     }
