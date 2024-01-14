@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vIMCwuWKT85Q+uEuWWGbvie7vbIMCoaS8AY2W8SJ03uYZuevwY0cP3pB7kctnF6al/H/t1pc4N41KFOsmQG7yg==",
+  "dgSpecHash": "dDQ3TIgBw7fB0hUqTLUnPqog61R5XC+dji2eIP38KTqXFdW+SKeloJT1+kcRmMxdC3szqWzNWYX6Eb11CAgFXg==",
   "success": true,
   "projectFilePath": "/Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/BankingApi.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "/Users/selinsakarya/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
     "/Users/selinsakarya/.nuget/packages/microsoft.aspnetcore.openapi/8.0.0-preview.7.23375.9/microsoft.aspnetcore.openapi.8.0.0-preview.7.23375.9.nupkg.sha512",
     "/Users/selinsakarya/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/Users/selinsakarya/.nuget/packages/microsoft.extensions.dependencyinjection/8.0.0/microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
     "/Users/selinsakarya/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "/Users/selinsakarya/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
     "/Users/selinsakarya/.nuget/packages/rabbitmq.client/6.8.1/rabbitmq.client.6.8.1.nupkg.sha512",

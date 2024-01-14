@@ -1,7 +1,7 @@
-using BankingApi.Commands;
 using BankingApi.Events;
+using EventBus.Commands;
 
-namespace BankingApi.Bus;
+namespace EventBus.Bus;
 
 public interface IEventBus
 {

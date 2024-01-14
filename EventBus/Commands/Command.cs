@@ -1,6 +1,6 @@
 using BankingApi.Events;
 
-namespace BankingApi.Commands;
+namespace EventBus.Commands;
 
 public abstract class Command : Message
 {

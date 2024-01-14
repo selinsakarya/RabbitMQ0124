@@ -1,12 +1,12 @@
 using System.Text;
 using System.Text.Json;
-using BankingApi.Commands;
 using BankingApi.Events;
+using EventBus.Commands;
 using MediatR;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
-namespace BankingApi.Bus;
+namespace EventBus.Bus;
 
 public class RabbitMqBus : IEventBus
 {
@@ -37,7 +37,7 @@ public class RabbitMqBus : IEventBus
 
         using IConnection connection = factory.CreateConnection();
         using IModel channel = connection.CreateModel();
-        
+
         string eventName = @event.GetType().Name;
 
         channel.QueueDeclare(eventName, false, false, false, null);
@@ -83,7 +83,7 @@ public class RabbitMqBus : IEventBus
 
         using IConnection connection = factory.CreateConnection();
         using IModel channel = connection.CreateModel();
-        
+
         string eventName = typeof(T).Name;
 
         channel.QueueDeclare(eventName, false, false, false, null);
@@ -136,7 +136,7 @@ public class RabbitMqBus : IEventBus
 
                 Type concreteType = typeof(IEventHandler<>).MakeGenericType(eventType);
 
-                await (Task)concreteType.GetMethod("Handle")!.Invoke(handler, [@event])!;
+                await (Task)concreteType.GetMethod("Handle")!.Invoke(handler, new object?[] {@event})!;
             }
         }
     }

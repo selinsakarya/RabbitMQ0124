@@ -1,6 +1,6 @@
 using BankingApi.Events;
 
-namespace BankingApi.Bus;
+namespace EventBus.Bus;
 
 public interface IEventHandler<in TEvent> : IEventHandler where TEvent: Event
 {
