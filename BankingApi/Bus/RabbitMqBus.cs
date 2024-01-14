@@ -35,21 +35,18 @@ public class RabbitMqBus : IEventBus
             Uri = new Uri("amqp://guest:guest@localhost:5672/")
         };
 
-        using (IConnection connection = factory.CreateConnection())
-        {
-            using (IModel channel = connection.CreateModel())
-            {
-                string eventName = @event.GetType().Name;
+        using IConnection connection = factory.CreateConnection();
+        using IModel channel = connection.CreateModel();
+        
+        string eventName = @event.GetType().Name;
 
-                channel.QueueDeclare(eventName, false, false, false, null);
+        channel.QueueDeclare(eventName, false, false, false, null);
 
-                string message = JsonSerializer.Serialize(@event);
+        string message = JsonSerializer.Serialize(@event);
 
-                var body = Encoding.UTF8.GetBytes(message);
+        var body = Encoding.UTF8.GetBytes(message);
 
-                channel.BasicPublish(exchange: string.Empty, routingKey: eventName, basicProperties: null, body: body);
-            }
-        }
+        channel.BasicPublish(exchange: string.Empty, routingKey: eventName, basicProperties: null, body: body);
     }
 
     public void Subscribe<T, TH>() where T : Event where TH : IEventHandler<T>
@@ -84,21 +81,18 @@ public class RabbitMqBus : IEventBus
             DispatchConsumersAsync = true
         };
 
-        using (IConnection connection = factory.CreateConnection())
-        {
-            using (IModel channel = connection.CreateModel())
-            {
-                string eventName = typeof(T).Name;
+        using IConnection connection = factory.CreateConnection();
+        using IModel channel = connection.CreateModel();
+        
+        string eventName = typeof(T).Name;
 
-                channel.QueueDeclare(eventName, false, false, false, null);
+        channel.QueueDeclare(eventName, false, false, false, null);
 
-                AsyncEventingBasicConsumer consumer = new AsyncEventingBasicConsumer(channel);
+        AsyncEventingBasicConsumer consumer = new AsyncEventingBasicConsumer(channel);
 
-                consumer.Received += ConsumeReceived;
+        consumer.Received += ConsumeReceived;
 
-                channel.BasicConsume(eventName, true, consumer);
-            }
-        }
+        channel.BasicConsume(eventName, true, consumer);
     }
 
     private async Task ConsumeReceived(object sender, BasicDeliverEventArgs eventArgs)
