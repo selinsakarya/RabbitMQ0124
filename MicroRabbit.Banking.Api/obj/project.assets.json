@@ -592,11 +592,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/BankingApi.csproj",
-      "projectName": "BankingApi",
-      "projectPath": "/Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/BankingApi.csproj",
+      "projectUniqueName": "/Users/selinsakarya/Projects/RabbitMQ0124/MicroRabbit.Banking.Api/MicroRabbit.Banking.Api.csproj",
+      "projectName": "MicroRabbit.Banking.Api",
+      "projectPath": "/Users/selinsakarya/Projects/RabbitMQ0124/MicroRabbit.Banking.Api/MicroRabbit.Banking.Api.csproj",
       "packagesPath": "/Users/selinsakarya/.nuget/packages/",
-      "outputPath": "/Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/obj/",
+      "outputPath": "/Users/selinsakarya/Projects/RabbitMQ0124/MicroRabbit.Banking.Api/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/selinsakarya/.nuget/NuGet/NuGet.Config"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qT56Jq+ECQ+ULhOnydyvQy3QhvJ1xFGT/K9biu81ZW7UucaoQ2ImYFHTowpBxYbIvQlriIBTXLsKfIf4O1OKgA==",
+  "dgSpecHash": "3cX5XfmXzZRxjxDVCDWgXMNQHpKRD2QoPeRHfaCw5g1svOpOEHL9EDcnU+Hou9P1TLKgrmfL8POntpnBeN9plw==",
   "success": true,
-  "projectFilePath": "/Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/BankingApi.csproj",
+  "projectFilePath": "/Users/selinsakarya/Projects/RabbitMQ0124/MicroRabbit.Banking.Api/MicroRabbit.Banking.Api.csproj",
   "expectedPackageFiles": [
     "/Users/selinsakarya/.nuget/packages/mediatr/12.2.0/mediatr.12.2.0.nupkg.sha512",
     "/Users/selinsakarya/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",
