@@ -7,7 +7,7 @@ using MicroRabbit.Domain.Core.Events;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 
-namespace EventBus.Bus;
+namespace MicroRabbit.Infra.Bus;
 
 public class RabbitMqBus : IEventBus
 {
