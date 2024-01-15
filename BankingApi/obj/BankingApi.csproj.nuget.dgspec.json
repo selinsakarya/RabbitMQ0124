@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "/Users/selinsakarya/Projects/RabbitMQ0124/EventBus/EventBus.csproj": {
-                "projectPath": "/Users/selinsakarya/Projects/RabbitMQ0124/EventBus/EventBus.csproj"
+              "/Users/selinsakarya/Projects/RabbitMQ0124/MicroRabbit.Domain.Core/MicroRabbit.Domain.Core.csproj": {
+                "projectPath": "/Users/selinsakarya/Projects/RabbitMQ0124/MicroRabbit.Domain.Core/MicroRabbit.Domain.Core.csproj"
               }
             }
           }
@@ -74,14 +74,14 @@
         }
       }
     },
-    "/Users/selinsakarya/Projects/RabbitMQ0124/EventBus/EventBus.csproj": {
+    "/Users/selinsakarya/Projects/RabbitMQ0124/MicroRabbit.Domain.Core/MicroRabbit.Domain.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/selinsakarya/Projects/RabbitMQ0124/EventBus/EventBus.csproj",
-        "projectName": "EventBus",
-        "projectPath": "/Users/selinsakarya/Projects/RabbitMQ0124/EventBus/EventBus.csproj",
+        "projectUniqueName": "/Users/selinsakarya/Projects/RabbitMQ0124/MicroRabbit.Domain.Core/MicroRabbit.Domain.Core.csproj",
+        "projectName": "MicroRabbit.Domain.Core",
+        "projectPath": "/Users/selinsakarya/Projects/RabbitMQ0124/MicroRabbit.Domain.Core/MicroRabbit.Domain.Core.csproj",
         "packagesPath": "/Users/selinsakarya/.nuget/packages/",
-        "outputPath": "/Users/selinsakarya/Projects/RabbitMQ0124/EventBus/obj/",
+        "outputPath": "/Users/selinsakarya/Projects/RabbitMQ0124/MicroRabbit.Domain.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/selinsakarya/.nuget/NuGet/NuGet.Config"
@@ -111,14 +111,6 @@
             "MediatR": {
               "target": "Package",
               "version": "[12.2.0, )"
-            },
-            "Microsoft.Extensions.DependencyInjection": {
-              "target": "Package",
-              "version": "[8.0.0, )"
-            },
-            "RabbitMQ.Client": {
-              "target": "Package",
-              "version": "[6.8.1, )"
             }
           },
           "imports": [

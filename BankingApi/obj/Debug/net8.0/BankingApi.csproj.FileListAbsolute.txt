@@ -7,15 +7,11 @@
 /Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/bin/Debug/net8.0/MediatR.dll
 /Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/bin/Debug/net8.0/MediatR.Contracts.dll
 /Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/bin/Debug/net8.0/Microsoft.AspNetCore.OpenApi.dll
-/Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.dll
 /Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/bin/Debug/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
 /Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/bin/Debug/net8.0/Microsoft.OpenApi.dll
-/Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/bin/Debug/net8.0/RabbitMQ.Client.dll
 /Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.Swagger.dll
 /Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/bin/Debug/net8.0/Swashbuckle.AspNetCore.SwaggerUI.dll
-/Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/bin/Debug/net8.0/EventBus.dll
-/Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/bin/Debug/net8.0/EventBus.pdb
 /Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/obj/Debug/net8.0/BankingApi.csproj.AssemblyReference.cache
 /Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/obj/Debug/net8.0/BankingApi.GeneratedMSBuildEditorConfig.editorconfig
 /Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/obj/Debug/net8.0/BankingApi.AssemblyInfoInputs.cache
@@ -38,3 +34,5 @@
 /Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/obj/Debug/net8.0/BankingApi.pdb
 /Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/obj/Debug/net8.0/BankingApi.genruntimeconfig.cache
 /Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/obj/Debug/net8.0/ref/BankingApi.dll
+/Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/bin/Debug/net8.0/MicroRabbit.Domain.Core.dll
+/Users/selinsakarya/Projects/RabbitMQ0124/BankingApi/bin/Debug/net8.0/MicroRabbit.Domain.Core.pdb
