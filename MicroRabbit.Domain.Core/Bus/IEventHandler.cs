@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using MicroRabbit.Domain.Core.Events;
 
 namespace MicroRabbit.Domain.Core.Bus;
