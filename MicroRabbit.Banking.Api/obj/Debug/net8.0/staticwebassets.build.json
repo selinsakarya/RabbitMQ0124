@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "qrySYx5+3P1NEgum6AftCfkxhJ/JSJV/JrFwCNR4KHc=",
-  "Source": "BankingApi",
-  "BasePath": "_content/BankingApi",
+  "Hash": "DaQt9DDvKgHBBSS15/xylnjK2PCCeUogQzid6n78zkI=",
+  "Source": "MicroRabbit.Banking.Api",
+  "BasePath": "_content/MicroRabbit.Banking.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
