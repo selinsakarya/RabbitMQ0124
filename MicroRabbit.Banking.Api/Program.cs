@@ -6,15 +6,12 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<BankingDbContext>(o =>
 {
-    o.UseInMemoryDatabase(builder.Configuration.GetConnectionString("BankingDb") ??
-                          throw new InvalidOperationException());
+    o.UseInMemoryDatabase(builder.Configuration.GetConnectionString("BankingDb") ?? throw new InvalidOperationException());
 });
 
 DependencyContainer.RegisterServices(builder.Services);
