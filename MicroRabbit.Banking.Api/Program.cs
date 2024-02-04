@@ -1,18 +1,25 @@
-using Microsoft.OpenApi.Models;
+using MicroRabbit.Banking.Application.Interfaces;
+using MicroRabbit.Banking.Data.Context;
+using MicroRabbit.Banking.Domain.Models;
+using MicroRabbit.Infra.IoC;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
-builder.Services.AddControllers();
-
-builder.Services.AddSwaggerGen(c =>
+builder.Services.AddDbContext<BankingDbContext>(o =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo() { Title = "Banking Microservice", Version = "v1" });
+    o.UseInMemoryDatabase(builder.Configuration.GetConnectionString("BankingDb") ??
+                          throw new InvalidOperationException());
 });
 
-WebApplication app = builder.Build();
+DependencyContainer.RegisterServices(builder.Services);
+
+var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -23,4 +30,15 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.MapGet("/accounts", async (IAccountService accountService, BankingDbContext bankingDbContext) =>
+    {
+        List<Account> accountsViaService = await accountService.GetAccounts();
+
+        List<Account> accountsViaDbContextDirectly = await bankingDbContext.Accounts.ToListAsync();
+        
+        return accountsViaDbContextDirectly;
+    })
+    .WithOpenApi();
+
 app.Run();
+
