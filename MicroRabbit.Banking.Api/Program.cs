@@ -27,13 +27,11 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.MapGet("/accounts", async (IAccountService accountService, BankingDbContext bankingDbContext) =>
+app.MapGet("/accounts", async (IAccountService accountService) =>
     {
-        List<Account> accountsViaService = await accountService.GetAccounts();
+        List<Account> accounts = await accountService.GetAccounts();
 
-        List<Account> accountsViaDbContextDirectly = await bankingDbContext.Accounts.ToListAsync();
-        
-        return accountsViaDbContextDirectly;
+        return accounts;
     })
     .WithOpenApi();
 
