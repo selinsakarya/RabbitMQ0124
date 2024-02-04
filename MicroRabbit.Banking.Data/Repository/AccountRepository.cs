@@ -12,6 +12,9 @@ public class AccountRepository : IAccountRepository
     public AccountRepository(BankingDbContext context)
     {
         _context = context;
+        
+        // For seeding in-memory db.
+        _context.Database.EnsureCreated();
     }
     
     public async Task<List<Account>> GetAccounts()

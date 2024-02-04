@@ -1,3 +1,5 @@
+using System.Reflection;
+using MediatR;
 using MicroRabbit.Banking.Application.Interfaces;
 using MicroRabbit.Banking.Data.Context;
 using MicroRabbit.Banking.Domain.Models;
@@ -13,6 +15,8 @@ builder.Services.AddDbContext<BankingDbContext>(o =>
 {
     o.UseInMemoryDatabase(builder.Configuration.GetConnectionString("BankingDb") ?? throw new InvalidOperationException());
 });
+
+builder.Services.AddMediatR(cfg=>cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
 
 DependencyContainer.RegisterServices(builder.Services);
 
