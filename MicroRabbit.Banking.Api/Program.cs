@@ -1,5 +1,4 @@
 using System.Reflection;
-using MediatR;
 using MicroRabbit.Banking.Application.Interfaces;
 using MicroRabbit.Banking.Data.Context;
 using MicroRabbit.Banking.Domain.Models;
