@@ -1,9 +1,8 @@
 using System.Reflection;
-using MicroRabbit.Banking.Application.Interfaces;
 using MicroRabbit.Banking.Data.Context;
-using MicroRabbit.Banking.Domain.Models;
 using MicroRabbit.Infra.IoC;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,31 +11,31 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<BankingDbContext>(o =>
 {
-    o.UseInMemoryDatabase(builder.Configuration.GetConnectionString("BankingDb") ?? throw new InvalidOperationException());
+    o.UseInMemoryDatabase(builder.Configuration.GetConnectionString("BankingDb") ??
+                          throw new InvalidOperationException());
 });
 
-builder.Services.AddMediatR(cfg=>cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo() { Title = "Banking Microservice", Version = "v1" });
+});
+
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
+
+builder.Services.AddControllers();
 
 DependencyContainer.RegisterServices(builder.Services);
 
-var app = builder.Build();
+WebApplication app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "Banking Microservice V1"); });
 }
 
 app.UseHttpsRedirection();
-
-app.MapGet("/accounts", async (IAccountService accountService) =>
-    {
-        List<Account> accounts = await accountService.GetAccounts();
-
-        return accounts;
-    })
-    .WithOpenApi();
-
+app.UseRouting();
+app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
 app.Run();
-
